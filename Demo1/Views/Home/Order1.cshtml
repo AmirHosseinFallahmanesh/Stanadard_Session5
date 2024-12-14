@@ -30,6 +30,11 @@
 
 
 
-</table> 
+</table>
 
-@(await Component.InvokeAsync("RecomendationProducts")))
+<div>
+    @*@Html.Partial("RecomProducts",Model.RecomProducts)*@
+
+    @await Html.PartialAsync("_RecomProducts", Model.RecomProducts)
+</div>
+
